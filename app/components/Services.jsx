@@ -26,11 +26,7 @@ const Services = ({isdarkMode}) => {
         whileInView={{opacity:1}}
         transition={{duration:0.5,delay:0.7}}
         className="text-center max-w-2xl mx-auto mb-10 mt-5 font-Ovo">
-        I am a Frontend Developer with over 10 years of experience in the
-        industry. I specialize in creating user-friendly and visually appealing
-        websites and applications. My expertise includes HTML, CSS, JavaScript,
-        React, and Next.js. I am passionate about delivering high-quality work
-        that meets the needs of my clients.
+        I provide full-stack development services, specializing in React, Angular, and Node.js to build scalable, secure, and high-performance web apps. My expertise includes API development, database optimization, cloud deployment, and UI/UX design, ensuring seamless and efficient digital solutions.
       </motion.p>
       <motion.div 
         initial={{opacity:0}}
@@ -46,9 +42,9 @@ const Services = ({isdarkMode}) => {
             <Image src={service.icon} alt="" className="w-10"/>
             <h3 className="my-4 text-lg text-gray-700 dark:text-white">{service.title}</h3>
             <p className="text-gray-600 text-sm leading-5 dark:text-white/80">{service.description}</p>
-            <a href={service.link} className="flex items-center gap-2 text-sm mt-5">
+            {/* <a href={service.link} className="flex items-center gap-2 text-sm mt-5">
                 Read more <Image src={assets.right_arrow} alt="arrow" className="w-4"/>
-            </a>
+            </a> */}
           </motion.div>
         ))}
       </motion.div>

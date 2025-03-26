@@ -26,9 +26,7 @@ const Work = ({isdarkMode}) => {
         whileInView={{opacity:1}}
         transition={{duration:0.7,delay:0.5}}
         className="text-center max-w-2xl mx-auto mb-10 mt-5 font-Ovo">
-        I am a Frontend Developer with over 10 years of experience in the
-        industry. I specialize in creating user-friendly and visually appealing
-        websites and applications.
+        I have worked on scalable and high-performance web applications across various industries, specializing in Angular, React, Node.js, and cloud-based solutions. My experience includes building admin panels, ERP systems, and real-time data platforms, integrating RESTful APIs, Role-Based Access Control (RBAC), and cloud storage. From optimizing backend performance to creating dynamic, responsive UIs, I focus on delivering secure, efficient, and user-friendly digital solutions that enhance business operations.
       </motion.p>
       <motion.div
         initial={{opacity:0}}
@@ -49,14 +47,14 @@ const Work = ({isdarkMode}) => {
                 <p className="text-sm text-gray-700">{project.description}</p>
               </div>
               <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0px_0px_#000] group-hover:shadow-[4px_4px_0px_0px_#000] group-hover:bg-lime-300 duration-500 trasition">
-                <Image src={assets.send_icon} alt="send icon" className="w-5" />
+                <a href={project.link} target="_blank"><Image src={assets.send_icon} alt="send icon" className="w-5" /></a>
               </div>
             </div>
           </motion.div>
         ))}
       </motion.div>
 
-      <motion.a
+      {/* <motion.a
         initial={{opacity:0}}
         whileInView={{opacity:1}}
         transition={{duration:0.5,delay:1.1}}
@@ -71,9 +69,11 @@ const Work = ({isdarkMode}) => {
           alt="Right arrow"
           className="w-4"
         />
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   );
 };
 
 export default Work;
+
+

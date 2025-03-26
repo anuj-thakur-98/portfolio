@@ -35,7 +35,7 @@ const Navbar = ({isdarkMode,setIsDarkMode}) => {
         <a href="#top">
           <Image
             src={isdarkMode?assets.logo_dark:assets.logo}
-            className="w-28 cursor-pointer mr-14"
+            className="w-40 cursor-pointer mr-14"
             alt=""
           />
         </a>
@@ -53,7 +53,7 @@ const Navbar = ({isdarkMode,setIsDarkMode}) => {
           </li>
           <li>
             <a className="font-Ovo" href="#services">
-              Serdvices
+              Services
             </a>
           </li>
           <li>
@@ -61,11 +61,11 @@ const Navbar = ({isdarkMode,setIsDarkMode}) => {
               My work
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className="font-Ovo" href="#contact">
               Contact us
             </a>
-          </li>
+          </li> */}
         </ul>
         <div className="flex items-center gap-4">
           <button onClick={() => setIsDarkMode(!isdarkMode)} >

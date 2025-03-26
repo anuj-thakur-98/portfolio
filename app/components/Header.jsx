@@ -21,7 +21,7 @@ const Header = () => {
         initial={{y:-20,opacity:0}}
         whileInView={{y:0,opacity:1}}
         transition={{duration:0.6,delay:0.3}}>
-        Hi! I'm William Mark 
+        Hi! I'm Anuj Thakur
         <Image src={assets.hand_icon} alt='' className='w-6'/>
       </motion.h3>
 
@@ -30,7 +30,7 @@ const Header = () => {
         whileInView={{y:0,opacity:1}}
         transition={{duration:0.8,delay:0.5}}
       >
-        Frontend web developer based in London.
+        Full Stack Web Developer
       </motion.h1>
 
       <motion.p className='max-w-2xl mx-auto font-Ovo'
@@ -38,8 +38,7 @@ const Header = () => {
         whileInView={{opacity:1}}
         transition={{duration:0.6,delay:0.7}}
       >
-        I am a frontend developer from California, USA with 10 years of experience 
-        in multiple companies like Microsoft, Tesla, and Apple.
+        I am a full stack developer specializing in Angular, Node.js, and React.js . Passionate about building scalable and secure web applications.
       </motion.p>
 
       {/* Contact & Resume Section */}

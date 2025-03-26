@@ -9,6 +9,19 @@ import vscode from './vscode.png';
 import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
+import kaycha from './kaycha.png';
+
+import bootstrap from './bootstrap.svg';
+import angular from './favicon.ico';
+import react from './react.svg';
+import css from './css.svg';
+import tailwind from './tailwind.svg';
+import docker from './docker.svg';
+import js from './js.svg';
+import php from './php.svg';
+import sql from './sql.svg';
+
+
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
@@ -37,6 +50,15 @@ import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
+    bootstrap,
+    angular,
+    react,
+    css,
+    tailwind,
+    docker,
+    sql,
+    php,
+    js,
     user_image,
     code_icon,
     code_icon_dark,
@@ -48,6 +70,7 @@ export const assets = {
     firebase,
     figma,
     git,
+    kaycha,
     mongodb,
     right_arrow_white,
     logo,
@@ -78,40 +101,44 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Kaycha labs',
+        description: 'Web App',
         bgImage: '/work-1.png',
+        link: 'https://kaychalabs.com/',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Oman Energy(OPAL)',
+        description: 'Web App',
+        bgImage: '/work-1.png',
+        link: 'https://kaychalabs.com/',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'Jump Admin',
+        description: 'Web App',
         bgImage: '/work-3.png',
+        link: 'http://18.209.192.96/admin/login',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'Spa Time',
+        description: 'Web App',
         bgImage: '/work-4.png',
+        link: 'https://bookspatime.com/'
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Full Stack Web Development', description: 'Building modern, scalable web applications with React, Angular, and Node.js.', link: '' },
+    { icon: assets.mobile_icon, title: 'API & Database Management', description: 'Designing secure RESTful APIs and optimizing MySQL/MongoDB databases.', link: '' },
+    { icon: assets.ui_icon, title: 'Performance Optimization', description: 'Enhancing website speed, security, overall efficiency, scalability, and user experience.', link: '' },
+    { icon: assets.graphics_icon, title: 'Server, Cloud & DevOps Solutions', description: 'Deploying scalable applications using AWS, Docker, and CI/CD pipelines.', link: '' },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'JavaScript, TypeScript, PHP, SQL' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science (2020)' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.angular,assets.react,assets.js,assets.sql,assets.docker,assets.vscode, assets.css,assets.bootstrap, assets.tailwind, assets.php, assets.git
 ];
