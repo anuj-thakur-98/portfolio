@@ -26,17 +26,17 @@ const Services = ({isdarkMode}) => {
         whileInView={{opacity:1}}
         transition={{duration:0.5,delay:0.7}}
         className="text-center max-w-2xl mx-auto mb-10 mt-5 font-Ovo">
-        I provide full-stack development services, specializing in React, Angular, and Node.js to build scalable, secure, and high-performance web apps. My expertise includes API development, database optimization, cloud deployment, and UI/UX design, ensuring seamless and efficient digital solutions.
+        I provide full-stack development services, specializing in React, Angular, and Node.js to build scalable, secure, and high-performance web apps. My expertise includes API development, database optimization, cloud deployment, and design, ensuring seamless and efficient digital solutions.
       </motion.p>
       <motion.div 
         initial={{opacity:0}}
         whileInView={{opacity:1}}
-        transition={{duration:0.6,delay:0.9}}
+        transition={{duration:0.6,delay:0.6}}
         className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 my-10">
         {serviceData.map((service, index) => (
           <motion.div
             whileHover={{scale: 1.05}}
-            className="border border-gray-400 rounded-xl px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
+            className="border border-gray-400 rounded-xl px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-[5px_5px_0px_0px_lime] "
             key={index}
           >
             <Image src={service.icon} alt="" className="w-10"/>

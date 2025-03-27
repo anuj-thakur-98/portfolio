@@ -57,7 +57,7 @@ const About = ({isdarkMode}) => {
                 key={index}
                 className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer 
                           hover:bg-lightHover hover:-translate-y-1 duration-500 
-                          hover:shadow-black dark:border-white dark:hover:shadow-white 
+                          hover:shadow-black dark:border-white  dark:hover:shadow-[5px_5px_0px_0px_lime] 
                           dark:hover:bg-darkHover/50'
              >
                 <Image src={isdarkMode?iconDark:icon} alt={title} className="w-7 mt-3" />
@@ -69,12 +69,12 @@ const About = ({isdarkMode}) => {
           <motion.h4
             initial={{y:20,opacity:0}}
             whileInView={{y:0,opacity:1}}
-            transition={{duration:0.4,delay:0.8}}
+            transition={{duration:0.4,delay:0.6}}
             className="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools I use</motion.h4>
           <motion.ul 
-            initial={{opacity:0}}
-            whileInView={{opacity:1}}
-            transition={{duration:0.4,delay:1}}
+             initial={{y:20,opacity:0}}
+             whileInView={{y:0,opacity:1}}
+             transition={{duration:0.4,delay:0.8}}
             className="flex items-center gap-3 sm:gap-2">
             {toolsData.map((tool, index) => (
               <motion.li
