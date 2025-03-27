@@ -75,8 +75,8 @@ const About = ({isdarkMode}) => {
              initial={{y:20,opacity:0}}
              whileInView={{y:0,opacity:1}}
              transition={{duration:0.4,delay:0.8}}
-            className="flex items-center gap-3 sm:gap-2">
-            {toolsData.map((tool, index) => (
+             className="grid grid-cols-6 md:grid-cols-8 lg:grid-cols-7  xl:grid-cols-10 gap-6 max-w-2xl">
+             {toolsData.map((tool, index) => (
               <motion.li
                 whileHover={{scale:1.05}}
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"

@@ -5,11 +5,14 @@ import React, { use, useEffect, useRef, useState } from "react";
 const Navbar = ({isdarkMode,setIsDarkMode}) => {
  const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
+
   const openMenu = () => {
+    sideMenuRef.current.classList.remove("hidden");
     sideMenuRef.current.style.transform = 'translateX(0rem)'
   };
 
   const closeMenu = () => {
+    sideMenuRef.current.classList.add("hidden");
     sideMenuRef.current.style.transform = 'translateX(16rem)'
   };
   useEffect(() => {
@@ -85,7 +88,7 @@ const Navbar = ({isdarkMode,setIsDarkMode}) => {
         </div>
         {/* mobile menu */}
 
-        <ul ref={sideMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-5 dark:bg-darkHover dark:text-white">
+        <ul ref={sideMenuRef} className="flex hidden flex-col gap-4 py-20 px-10 fixed -right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-5 dark:bg-darkHover dark:text-white">
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image src={isdarkMode?assets.close_white:assets.close_black} className="w-5" alt="" />
           </div>
