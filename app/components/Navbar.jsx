@@ -109,11 +109,11 @@ const Navbar = ({isdarkMode,setIsDarkMode}) => {
               My work
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className="font-Ovo" href="#contact" onClick={closeMenu}>
               Contact us
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </>

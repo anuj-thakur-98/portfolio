@@ -43,7 +43,7 @@ const Header = () => {
 
       {/* Contact & Resume Section */}
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-        <motion.a href="#contact"
+        <motion.a href="https://wa.me/8194974530"
           className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
           initial={{y:30,opacity:0}}
           whileInView={{y:0,opacity:1}}
@@ -52,7 +52,7 @@ const Header = () => {
           <Image src={assets.right_arrow_white} alt='' className='w-4'/>
         </motion.a>
 
-        <motion.a href="/sample-resume.pdf" download
+        <motion.a href="/anuj-cv.pdf" download
           className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'
             initial={{y:30,opacity:0}}
             whileInView={{y:0,opacity:1}}

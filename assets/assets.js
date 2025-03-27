@@ -103,13 +103,13 @@ export const workData = [
     {
         title: 'Kaycha labs',
         description: 'Web App',
-        bgImage: '/work-1.png',
+        bgImage: '/kaycha.png',
         link: 'https://kaychalabs.com/',
     },
     {
-        title: 'Oman Energy(OPAL)',
+        title: 'OPAL',
         description: 'Web App',
-        bgImage: '/work-1.png',
+        bgImage: '/opal.jpg',
         link: 'https://kaychalabs.com/',
     },
     {
@@ -121,7 +121,7 @@ export const workData = [
     {
         title: 'Spa Time',
         description: 'Web App',
-        bgImage: '/work-4.png',
+        bgImage: '/spatime.jpg',
         link: 'https://bookspatime.com/'
     },
 ]

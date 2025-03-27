@@ -8,28 +8,28 @@ const About = ({isdarkMode}) => {
     <motion.div id="about" 
       initial={{opacity:0}}
       whileInView={{opacity:1}}
-      transition={{duration:1}}
+      transition={{duration:0.8}}
       className="w-full px-[12%] py-10 scroll-mt-20">
       <motion.h4 
          initial={{y:-20,opacity:0}}
          whileInView={{y:0,opacity:1}}
-         transition={{duration:0.5,delay:0.3}}
+         transition={{duration:0.4,delay:0.2}}
          className="text-center mb-2 text-lg font-Ovo">Introduction</motion.h4>
       <motion.h2
         initial={{y:-20,opacity:0}}
         whileInView={{y:0,opacity:1}}
-        transition={{duration:0.5,delay:0.5}}
+        transition={{duration:0.4,delay:0.4}}
         className="text-center text-5xl font-Ovo">About me</motion.h2>
 
       <motion.div
         initial={{opacity:0}}
         whileInView={{y:0,opacity:1}}
-        transition={{duration:0.8}}
+        transition={{duration:0.6}}
         className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
         <motion.div 
           initial={{y:-20,opacity:0}}
           whileInView={{y:0,opacity:1}}
-          transition={{duration:0.5,delay:0.3}}
+          transition={{duration:0.4,delay:0.2}}
           className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
             src={assets.user_image}
@@ -40,7 +40,7 @@ const About = ({isdarkMode}) => {
         <motion.div 
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.6,delay:0.8}}
+          transition={{duration:0.4,delay:0.6}}
           className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo">
             I'm a Full Stack Developer with 4+ years of experience, working with React, Angular, and Node.js to build fast and scalable web apps. I love solving problems, optimizing performance, and creating smooth user experiences. Whether it's frontend design or backend logic, I enjoy making things work seamlessly.
@@ -48,12 +48,12 @@ const About = ({isdarkMode}) => {
           <motion.ul   
             initial={{opacity:0}}
             whileInView={{opacity:1}}
-            transition={{duration:0.8,delay:1}} 
+            transition={{duration:0.6,delay:0.8}} 
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
                <motion.li
                 whileInView={{scale:1.05}}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.2 }}
                 key={index}
                 className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer 
                           hover:bg-lightHover hover:-translate-y-1 duration-500 
@@ -69,13 +69,13 @@ const About = ({isdarkMode}) => {
           <motion.h4
             initial={{y:20,opacity:0}}
             whileInView={{y:0,opacity:1}}
-            transition={{duration:0.5,delay:1.3}}
+            transition={{duration:0.4,delay:0.8}}
             className="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools I use</motion.h4>
           <motion.ul 
             initial={{opacity:0}}
             whileInView={{opacity:1}}
-            transition={{duration:0.6,delay:1.5}}
-            className="flex items-center gap-3 sm:gap-5">
+            transition={{duration:0.4,delay:1}}
+            className="flex items-center gap-3 sm:gap-2">
             {toolsData.map((tool, index) => (
               <motion.li
                 whileHover={{scale:1.05}}
