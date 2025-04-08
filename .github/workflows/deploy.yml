@@ -28,7 +28,8 @@ jobs:
             git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git 
             echo "After Pull:"
             git log -1
-            sudo docker build --no-cache -t your-nextjs-app .
+            sudo docker images -f "dangling=true" -q | xargs docker rmi -f
+            sudo docker build --no-cache -t portfolio-app .
             sudo docker stop nextjs-container || true && sudo docker rm nextjs-container || true
-            sudo docker run -d -p 80:3000 --name nextjs-container your-nextjs-app
+            sudo docker run -d -p 80:3000 --name nextjs-container portfolio-app
           EOF
