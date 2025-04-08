@@ -26,5 +26,5 @@ jobs:
             git pull origin main
             sudo docker build -t your-nextjs-app .
             sudo docker stop nextjs-container || true && sudo docker rm nextjs-container || true
-            sudo docker run -d -p 22:3000 --name nextjs-container your-nextjs-app
+            sudo docker run -d -p 3000:3000 --name nextjs-container nextjs-app
           EOF
