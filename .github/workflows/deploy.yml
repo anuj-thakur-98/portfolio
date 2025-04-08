@@ -22,11 +22,9 @@ jobs:
       - name: Copy files to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
-            sudo chown -R ubuntu:ubuntu /home/ubuntu/portfolio/portfolio
-            sudo chmod -R 755 /home/ubuntu/portfolio/portfolio
-            git config --global --add safe.directory /home/ubuntu/portfolio/portfolio
             cd /home/ubuntu/portfolio/portfolio
-            git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git
+            git reset --hard origin/main
+            git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git 
             echo "After Pull:"
             git log -1
             sudo docker build -t your-nextjs-app .
