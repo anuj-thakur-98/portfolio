@@ -23,8 +23,11 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
             cd /home/ubuntu/portfolio/portfolio
-            git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git main
-            sudo docker build -t your-nextjs-app .
+            echo "Before Pull:"
+            git log -1
+            git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git
+            echo "After Pull:"
+            git log -1            sudo docker build -t your-nextjs-app .
             sudo docker stop nextjs-container || true && sudo docker rm nextjs-container || true
             sudo docker run -d -p 80:3000 --name nextjs-container your-nextjs-app
           EOF
