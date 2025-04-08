@@ -31,5 +31,6 @@ jobs:
             sudo docker build --no-cache -t portfolio-app .
             sudo docker stop nextjs-container || true && sudo docker rm nextjs-container || true
             sudo docker run -d -p 80:3000 --name nextjs-container portfolio-app
-            sudo docker images --filter "dangling=true" --format "{{.Repository}} {{.ID}}" | awk '$1 == "<none>" { print $2 }' | xargs -r sudo docker rmi -f
+            sudo docker container prune -f
+            sudo docker images -f "dangling=true" -q | xargs -r sudo docker rmi -f
           EOF
