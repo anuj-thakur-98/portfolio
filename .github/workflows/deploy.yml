@@ -23,6 +23,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
             cd /home/ubuntu/portfolio/portfolio
+            git fetch
             git reset --hard origin/main
             git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git 
             echo "After Pull:"
