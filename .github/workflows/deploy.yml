@@ -1,0 +1,30 @@
+# .github/workflows/deploy.yml
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main  # or 'master' or your deploy branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      - name: Copy files to EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no ec2-user@<EC2_HOST> << 'EOF'
+            cd /home/ubuntu/portfolio/portfolio
+            git pull origin main
+            docker build -t your-nextjs-app .
+            docker stop nextjs-container || true && docker rm nextjs-container || true
+            docker run -d -p 22:3000 --name nextjs-container your-nextjs-app
+          EOF

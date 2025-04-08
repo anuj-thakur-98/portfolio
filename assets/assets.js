@@ -110,7 +110,7 @@ export const workData = [
         title: 'OPAL',
         description: 'Web App',
         bgImage: '/opal.jpg',
-        link: 'https://kaychalabs.com/',
+        link: 'https://usp.opaloman.om/',
     },
     {
         title: 'Jump Admin',
