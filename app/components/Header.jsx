@@ -60,7 +60,7 @@ const Header = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          Contact Me
+          Contact Mee
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </motion.a>
 
