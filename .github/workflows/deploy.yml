@@ -25,6 +25,7 @@ jobs:
             cd /home/ubuntu/portfolio/portfolio
             echo "Before Pull:"
             git log -1
+            git config --global --add safe.directory /home/ubuntu/portfolio/portfolio
             git pull https://${{ secrets.GHP }}@github.com/anuj-thakur-98/portfolio.git
             echo "After Pull:"
             git log -1            sudo docker build -t your-nextjs-app .
